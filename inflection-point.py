@@ -18,8 +18,6 @@ def find_inflection_point(words):
             return ceiling_index
 
 
-
-
 print(find_inflection_point([
     'ptolemaic',
     'retrograde',
@@ -33,3 +31,10 @@ print(find_inflection_point([
     'karpatka',
     'othellolagkage',
 ]))
+
+# Binary search teaches us that when a list is sorted or mostly sorted:
+
+# The value at a given index tells us a lot about what's to the left and what's to the right.
+# We don't have to look at every item in the list. By inspecting the middle item, we can "rule out" half of the list.
+# We can use this approach over and over, cutting the problem in half until we have the answer. This is sometimes called "divide and conquer."
+# So whenever you know a list is sorted or almost sorted, think about these lessons from binary search and see if they apply.
